@@ -1,6 +1,6 @@
 <md-sidenav-layout>
-    <md-sidenav #sidenav mode="side" class="app-sidenav">
-        <nav class="navbar navbar-collapse" role="navigation">
+    <md-sidenav #sidenav mode="side" class="app-sidenav md-sidenav-opened">
+        <nav class="navbar navbar-inverse navbar-collapse" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
 
@@ -12,24 +12,26 @@
                 </button>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation">
-                        <a [routerLink]="['/home']">
-                            <span class='glyphicon glyphicon-home'></span> Home
-                        </a>
-                    </li>
-                    <li role="presentation">
-                        <a [routerLink]="['/counter']">
-                            <span class='glyphicon glyphicon-education'></span> Counter
-                        </a>
-                    </li>
-                    <li role="presentation">
-                        <a [routerLink]="['/fetch-data']">
-                            <span class='glyphicon glyphicon-th-list'></span> Fetch data
-                        </a>
-                    </li>
-                </ul>
+            <div class="navbar-collapse nav-divider">
+                <div class="side-menu">
+                    <ul class="nav nav-pills nav-stacked panel-body">
+                        <li role="presentation">
+                            <a [routerLink]="['/home']" class="navbar-nav">
+                                <span class='glyphicon glyphicon-home'></span> Home
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a [routerLink]="['/counter']" class="navbar-nav">
+                                <span class='glyphicon glyphicon-education'></span> Counter
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a [routerLink]="['/fetch-data']" class="navbar-nav">
+                                <span class='glyphicon glyphicon-th-list'></span> Fetch data
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
