@@ -2,9 +2,7 @@
   "version": "1.0.0-*",
 
   "dependencies": {
-    "CommonLibrary": "1.0.0-*",
-    "NETStandard.Library": "1.6.0",
-    "Newtonsoft.Json": "9.0.1"
+    "NETStandard.Library": "1.6.0"
   },
 
   "frameworks": {

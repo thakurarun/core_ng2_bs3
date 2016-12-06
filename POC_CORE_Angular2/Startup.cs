@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using POC_CORE_Angular2.Config;
 
 namespace POC_CORE_Angular2
 {
@@ -21,6 +22,7 @@ namespace POC_CORE_Angular2
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+            ConfigMapper.Initialize();
         }
 
         public IConfigurationRoot Configuration { get; }
@@ -41,7 +43,8 @@ namespace POC_CORE_Angular2
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions {
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
                     HotModuleReplacement = true
                 });
             }
