@@ -4,6 +4,8 @@ import { UniversalModule } from 'angular2-universal';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 import { AppComponent } from './components/app/app.component'
+import { MovieListComponent } from './components/home/movieList.component'
+
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { SearchComponent } from './components/tools/search.component';
@@ -11,6 +13,7 @@ import { SearchComponent } from './components/tools/search.component';
     bootstrap: [AppComponent],
     declarations: [
         AppComponent,
+        MovieListComponent,
         NavMenuComponent,
         FetchDataComponent,
         SearchComponent
@@ -21,6 +24,7 @@ import { SearchComponent } from './components/tools/search.component';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'home', component: MovieListComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]
