@@ -1,18 +1,38 @@
 <h3>
     Latest Movies
 </h3>
-<div class="movie-list" *ngIf="movies">
-    <div class="row" *ngFor="let movie of movies">
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img class="img-responsive img-rounded" src="{{movie.background_image}}" alt="not available">
-                <div class="caption">
-                    <h4>{{ movie.title }} | {{ movie.year }}</h4>
-                    <p>{{movie.summary}}</p>
-                    <div class="pull-right">
-                        <span class="label label-info" *ngFor="let genre of movie.genres">{{genre}}</span>
+<div class="movie-list container-fluid" *ngIf="movies">
+    <div class="row thumbnail" *ngFor="let movie of movies">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div [ngStyle]="{'background-image': 'url(' + movie.background_image + ')'}">
+                        <div col="col-md-4">
+                            <img class="img-responsive img-rounded " src="{{movie.medium_cover_image}} " alt="not available">
+                        </div>
+                        <div col="col-md-8">
+                            <span class="label" *ngFor="let genre of movie.genres ">{{genre}}</span>
+                        </div>
+
                     </div>
-                    <a href="#" class="btn btn-primary">Watch</a>
+                    <span> {{ movie.title }} </span>
+                    <span> ({{ movie.year }}) </span>
+                    <span class="pull-right"> IMDB rating: {{movie.rating}}</span>
+                </div>
+            </div>
+            <div class="pull-left">
+                <a href="# " class="btn btn-primary ">
+                    <span class="glyphicon glyphicon-download-alt " aria-hidden="true ">&nbsp;Get</span>
+                </a>
+                <a href="# " class="btn btn-primary ">
+                    <span class="glyphicon glyphicon-play " aria-hidden="true ">&nbsp;Play</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>{{movie.summary}}</p>
                 </div>
             </div>
         </div>

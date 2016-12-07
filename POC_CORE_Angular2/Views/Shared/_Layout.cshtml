@@ -8,9 +8,10 @@
         <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body>
-        @RenderBody()
-
+    <body style="margin-top:70px;">
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
         @RenderSection("scripts", required: false)
     </body>
 </html>
