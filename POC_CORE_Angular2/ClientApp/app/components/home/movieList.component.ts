@@ -21,13 +21,15 @@ export class MovieListComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.service.getMovies().then((movies) => {
+        this.service.getMovies().then((movies: MovieDTO[]) => {
+            debugger;
             this.movies = movies;
         });
     }
 
-    playNow(torrent: TorrentDTO) {
-        var client =  new WebTorrentAPI(torrent);
+    playNow(torrent: TorrentDTO[]) {
+        debugger;
+        var client = new WebTorrentAPI(torrent[0]);
         client.StartDownload();
     }
 

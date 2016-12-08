@@ -23,7 +23,7 @@
             "medium_cover_image": "https://yts.ag/assets/images/movies/the_magnificent_seven_2016/medium-cover.jpg",
             "large_cover_image": "https://yts.ag/assets/images/movies/the_magnificent_seven_2016/large-cover.jpg",
             "state": "ok",
-            "torrentDTOs": [
+            "torrents": [
                 {
                     "url": "https://yts.ag/torrent/download/2654480F01BD187024016281A344E5AB1D5548CF",
                     "hash": "2654480F01BD187024016281A344E5AB1D5548CF",
@@ -72,7 +72,7 @@
             "medium_cover_image": "https://yts.ag/assets/images/movies/beware_the_blob_1972/medium-cover.jpg",
             "large_cover_image": "https://yts.ag/assets/images/movies/beware_the_blob_1972/large-cover.jpg",
             "state": "ok",
-            "torrentDTOs": [
+            "torrents": [
                 {
                     "url": "https://yts.ag/torrent/download/531CC2B3DD07FD5B31CA5CB5FDDE5A2123DBE547",
                     "hash": "531CC2B3DD07FD5B31CA5CB5FDDE5A2123DBE547",
@@ -121,7 +121,7 @@
             "medium_cover_image": "https://yts.ag/assets/images/movies/frankenstein_must_be_destroyed_1969/medium-cover.jpg",
             "large_cover_image": "https://yts.ag/assets/images/movies/frankenstein_must_be_destroyed_1969/large-cover.jpg",
             "state": "ok",
-            "torrentDTOs": [
+            "torrents": [
                 {
                     "url": "https://yts.ag/torrent/download/17CB4B88696A6F2E26472DB166A28670223D62BE",
                     "hash": "17CB4B88696A6F2E26472DB166A28670223D62BE",
@@ -168,7 +168,7 @@
             "medium_cover_image": "https://yts.ag/assets/images/movies/lo_and_behold_reveries_of_the_connected_world_2016/medium-cover.jpg",
             "large_cover_image": "https://yts.ag/assets/images/movies/lo_and_behold_reveries_of_the_connected_world_2016/large-cover.jpg",
             "state": "ok",
-            "torrentDTOs": [
+            "torrents": [
                 {
                     "url": "https://yts.ag/torrent/download/DFE64F8AF92E98988539975F826FF2BACAFC4DEA",
                     "hash": "DFE64F8AF92E98988539975F826FF2BACAFC4DEA",
@@ -218,7 +218,7 @@
             "medium_cover_image": "https://yts.ag/assets/images/movies/miss_peregrines_home_for_peculiar_children_2016/medium-cover.jpg",
             "large_cover_image": "https://yts.ag/assets/images/movies/miss_peregrines_home_for_peculiar_children_2016/large-cover.jpg",
             "state": "ok",
-            "torrentDTOs": [
+            "torrents": [
                 {
                     "url": "https://yts.ag/torrent/download/AC1D164A300291B6A5F89902089ED400336ABC45",
                     "hash": "AC1D164A300291B6A5F89902089ED400336ABC45",
