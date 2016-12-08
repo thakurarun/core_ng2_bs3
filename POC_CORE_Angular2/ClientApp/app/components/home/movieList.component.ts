@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { IMovieService } from '../../Services/MovieService';
 import { ResolveService } from '../../Services/ResolveService';
 
-import { MovieDTO } from '../../Model/DTO/MovieModel';
+import { MovieDTO, TorrentDTO } from '../../Model/DTO/MovieModel';
+
+import { WebTorrentAPI } from '../../WebTorrentAPI/WebTorrentAPI'
+
 @Component({
     selector: 'movie-list',
     template: require('./movieList.component.html'),
@@ -22,4 +25,10 @@ export class MovieListComponent implements OnInit {
             this.movies = movies;
         });
     }
+
+    playNow(torrent: TorrentDTO) {
+        var client =  new WebTorrentAPI(torrent);
+        client.StartDownload();
+    }
+
 }

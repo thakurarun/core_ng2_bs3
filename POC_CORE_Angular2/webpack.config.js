@@ -1,5 +1,6 @@
 var isDevBuild = process.argv.indexOf('--env.prod') < 0;
 var path = require('path');
+var fs = require('fs');
 var webpack = require('webpack');
 var nodeExternals = require('webpack-node-externals');
 var merge = require('webpack-merge');
@@ -17,8 +18,12 @@ var sharedConfig = {
             { test: /\.ts$/, include: /ClientApp/, loader: 'ts', query: { silent: true } },
             { test: /\.html$/, loader: 'raw' },
             { test: /\.css$/, loader: 'to-string!css' },
-            { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'url', query: { limit: 25000 } }
+            { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'url', query: { limit: 25000 } },
+            { test: /\.json$/, loader: 'json-loader' }
         ]
+    },
+    node: {
+        fs: "empty"
     }
 };
 
@@ -46,7 +51,7 @@ var serverBundleConfig = merge(sharedConfig, {
         libraryTarget: 'commonjs',
         path: path.join(__dirname, './ClientApp/dist')
     },
-    target: 'node',
+    target: 'web',
     devtool: 'inline-source-map',
     externals: [nodeExternals({ whitelist: [allFilenamesExceptJavaScript] })] // Don't bundle .js files from node_modules
 });

@@ -13,7 +13,6 @@
                         <div col="col-md-8">
                             <span class="label" *ngFor="let genre of movie.genres ">{{genre}}</span>
                         </div>
-
                     </div>
                     <span> {{ movie.title }} </span>
                     <span> ({{ movie.year }}) </span>
@@ -21,12 +20,11 @@
                 </div>
             </div>
             <div class="pull-left">
-                <a href="# " class="btn btn-primary ">
-                    <span class="glyphicon glyphicon-download-alt " aria-hidden="true ">&nbsp;Get</span>
-                </a>
-                <a href="# " class="btn btn-primary ">
-                    <span class="glyphicon glyphicon-play " aria-hidden="true ">&nbsp;Play</span>
-                </a>
+                <span class="btn btn-primary glyphicon glyphicon-download-alt " aria-hidden="true ">&nbsp;Get</span>
+                <span class="btn btn-primary glyphicon glyphicon-play " aria-hidden="true " (click)="playNow(movie.torrents)">
+                    &nbsp;Play
+                </span>
+
             </div>
         </div>
         <div class="col-md-4">

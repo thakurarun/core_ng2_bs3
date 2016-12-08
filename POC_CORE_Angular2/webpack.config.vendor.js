@@ -1,5 +1,6 @@
 var isDevBuild = process.argv.indexOf('--env.prod') < 0;
 var path = require('path');
+var fs = require('fs');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var extractCSS = new ExtractTextPlugin('vendor.css');
@@ -11,7 +12,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, loader: 'url-loader?limit=100000' },
-            { test: /\.css(\?|$)/, loader: extractCSS.extract(['css']) }
+            { test: /\.css(\?|$)/, loader: extractCSS.extract(['css']) },
         ]
     },
     entry: {
@@ -32,13 +33,14 @@ module.exports = {
             'es6-promise',
             'jquery',
             'zone.js',
+            'webtorrent'
         ]
     },
     output: {
         path: path.join(__dirname, 'wwwroot', 'dist'),
         filename: '[name].js',
         library: '[name]_[hash]',
-    },
+    }, 
     plugins: [
         extractCSS,
         new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }), // Maps these identifiers to the jQuery package (because Bootstrap expects it to be a global variable)

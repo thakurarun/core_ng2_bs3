@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-var movieResult = require('json!./Data/movieResult.json');
+var movieResult = require('./Data/movieResult.json');
 import { MovieSearchResult } from '../../Model/MovieSearchResult';
 import { MovieDTO } from '../../Model/DTO/MovieModel';
 import { IMovieService } from '../MovieService';
